@@ -7,7 +7,7 @@ public class Rectangulo {
 	//atributos
 	private double base;
 	private double altura;
-	//private Punto centro;
+	private Punto centro;
 	private int color;
 	
 	//Constructor por defecto
@@ -15,15 +15,15 @@ public class Rectangulo {
 		this.base = 0;
 		this.altura = 0;
 		this.color = 0;
-		//this.centro = new Punto ();
+		this.centro = new Punto ();
 	}
 	
 	//Constructor con todos los campos. 
-	public Rectangulo(double base, double altura,int color) {
+	public Rectangulo(double base, double altura,int color, ) {
 		this.base = base;
 		this.altura = altura;
-		//this.centro = centro;
 		this.color = color;
+		this.centro = centro;
 	}
 	
 	//Constructor de clonado
@@ -121,6 +121,10 @@ public class Rectangulo {
 		Pantalla.escribirString("Altura: \n" + altura);
 		Pantalla.escribirSaltoLinea();
 		Pantalla.escribirInt("Color: \n" + color, color);
+
+		/**/
+
+		
 	}
 	
 
