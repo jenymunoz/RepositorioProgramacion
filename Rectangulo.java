@@ -123,7 +123,11 @@ public class Rectangulo {
 		Pantalla.escribirInt("Color: \n" + color, color);
 
 		/**/
-
+		/* Estos son apuntes 
+  			
+  		
+    		
+      		*/
 		
 	}
 	
