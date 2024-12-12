@@ -1,4 +1,4 @@
-package com.rectangulo;
+package rectanguloClass;
 
 import daw.com.Teclado;
 import daw.com.Pantalla;
@@ -44,11 +44,12 @@ public class Rectangulo {
 		Pantalla.escribirInt("Color: " + color, color);
 		Pantalla.escribirSaltoLinea();
 		centro.mostrarDatos();
+		Pantalla.escribirSaltoLinea();
 	}
 	
 /*get y set*/
-	public double getBase() {
-		return base;}
+	/*public double getBase() {
+		return base;}*/
 	
 	public void setBase(double base) {
 		this.base = base;
@@ -77,20 +78,6 @@ public class Rectangulo {
 	public void setCentro(Punto centro) {
 		this.centro = centro;
 	}
-	
-/*operaciones para el perimetro, area y diagonal*/
-	public double perimetro () {
-		return (double) 2 * (base + altura);
-	}
-	
-	public double area () {
-		return (double) base * altura;
-	}
-	
-	public double diagonal () {
-		return (double) Math.sqrt((base * base) + (altura * altura));
-	}
-	
 	
 /*Metodo para cambiar datos*/
 	public void cambiarDatos() {
@@ -127,11 +114,35 @@ public class Rectangulo {
 		 Pantalla.escribirString("Indica el nuevo valor del punto Y: ");
 		 String yNueva = Teclado.leerString();
 		 if (!yNueva.isEmpty());
-		 	this.centro.setY(Integer.valueOf(yNueva));
-		 	
-		 
+		 	this.centro.setY(Integer.valueOf(yNueva)); 
 	}
 	
+/*operaciones para el perimetro, area y diagonal*/
+		public double perimetro () {
+			return (double) 2 * (base + altura);
+		}
 	
+		public double area () {
+			return (double) base * altura;
+		}
+	
+		public double diagonal () {
+			return (double) Math.sqrt((base * base) + (altura * altura));
+		}
 
-}
+/*Leer datos*/
+		public void leerDatos() {
+			String baseleida = Teclado.leerString();
+			try {
+			 double baseleidaA = Double.parseDouble(baseleida);
+			 setBase(baseleidaA);
+			}catch (Exception e) {
+				setBase(-1);
+			}
+		}
+		
+		
+	
+	
+	}
+	
